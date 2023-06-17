@@ -47,4 +47,10 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    use {
+      'terrortylor/nvim-comment',
+      config = function()
+        require('nvim_comment').setup()
+      end
+    }
 end)
