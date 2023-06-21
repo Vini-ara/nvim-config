@@ -53,4 +53,5 @@ return require('packer').startup(function(use)
         require('nvim_comment').setup()
       end
     }
+    use 'wakatime/vim-wakatime'
 end)

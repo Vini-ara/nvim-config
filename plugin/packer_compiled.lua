@@ -176,6 +176,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bigu/.local/share/nvim/site/pack/packer/start/vim-prettier",
     url = "https://github.com/prettier/vim-prettier"
+  },
+  ["vim-wakatime"] = {
+    loaded = true,
+    path = "/home/bigu/.local/share/nvim/site/pack/packer/start/vim-wakatime",
+    url = "https://github.com/wakatime/vim-wakatime"
   }
 }
 
