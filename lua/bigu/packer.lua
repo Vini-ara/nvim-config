@@ -54,4 +54,7 @@ return require('packer').startup(function(use)
       end
     }
     use 'wakatime/vim-wakatime'
+    use 'sainnhe/everforest'
+    use 'nvim-tree/nvim-tree.lua'
+    use 'nvim-tree/nvim-web-devicons'
 end)
