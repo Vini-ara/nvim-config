@@ -57,4 +57,5 @@ return require('packer').startup(function(use)
     use 'sainnhe/everforest'
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
+    use 'onsails/lspkind.nvim'
 end)
