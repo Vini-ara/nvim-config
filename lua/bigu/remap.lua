@@ -4,6 +4,9 @@ vim.keymap.set("n", "<leader>e", '<cmd>:NvimTreeToggle<CR>')
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
 vim.cmd([[ 
     let g:prettier#autoformat = 1
     let g:prettier#autoformat_require_pragma = 0
