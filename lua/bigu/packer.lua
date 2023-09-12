@@ -4,17 +4,9 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-    -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('ThePrimeagen/harpoon')
-    use('mbbill/undotree')
-    use('tpope/vim-fugitive')
+
+    -- Basics
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -36,26 +28,54 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },     -- Required
         }
     }
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+
+    -- FileExplorer
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
+    use 'nvim-tree/nvim-tree.lua'
+    use('ThePrimeagen/harpoon')
+
+    -- colorschemes
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use 'sainnhe/everforest'
+    use "EdenEast/nightfox.nvim"
+
+    -- Quirks
+    use('mbbill/undotree')
+    use('tpope/vim-fugitive')
     use('prettier/vim-prettier')
-    use {
-        'lewis6991/gitsigns.nvim',
-        config = function()
-            require('gitsigns').setup()
-        end
-    }
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
+    use 'github/copilot.vim'
+    use 'wakatime/vim-wakatime'
     use {
       'terrortylor/nvim-comment',
       config = function()
         require('nvim_comment').setup()
       end
     }
-    use 'wakatime/vim-wakatime'
-    use 'sainnhe/everforest'
-    use 'nvim-tree/nvim-tree.lua'
+    use {
+      'karb94/neoscroll.nvim',
+      config = function()
+        require('neoscroll').setup()
+      end
+    }
+
+    -- Pretty things
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+    -- Icon Packs
     use 'nvim-tree/nvim-web-devicons'
     use 'onsails/lspkind.nvim'
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
+
 end)
