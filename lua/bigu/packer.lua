@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
         }
     }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use('JoosepAlviste/nvim-ts-context-commentstring')
 
     -- FileExplorer
     use {
@@ -61,6 +62,7 @@ return require('packer').startup(function(use)
         require('neoscroll').setup()
       end
     }
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
     -- Pretty things
     use {
