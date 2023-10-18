@@ -43,6 +43,7 @@ return require('packer').startup(function(use)
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use 'sainnhe/everforest'
     use "EdenEast/nightfox.nvim"
+    use 'navarasu/onedark.nvim'
 
     -- Quirks
     use('mbbill/undotree')
