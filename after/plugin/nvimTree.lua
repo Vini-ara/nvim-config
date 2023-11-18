@@ -1,8 +1,8 @@
 require("nvim-tree").setup({
-  reload_on_bufenter = false,
+  reload_on_bufenter = true,
   filters = {
     dotfiles = true,
-    exclude = {".git", "node_modules", ".cache"},
+    exclude = {".env", ".env.local"},
   },
   update_focused_file = {
       enable = true,
@@ -11,7 +11,7 @@ require("nvim-tree").setup({
   },
   sort_by = "case_sensitive",
   view = {
-    width = 25,
+    width = 30,
   },
   renderer = {
     group_empty = true,

@@ -13,7 +13,7 @@ vim.cmd([[
 ]])
 
 vim.keymap.set("n", "J", "mzJ`z")
--- TODO: ver qual shotcut usar para <C-u>(pular pagina para baixo)
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")

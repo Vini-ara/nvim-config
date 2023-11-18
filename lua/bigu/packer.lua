@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
 
     -- FileExplorer
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'nvim-tree/nvim-tree.lua'
@@ -57,13 +57,16 @@ return require('packer').startup(function(use)
         require('nvim_comment').setup()
       end
     }
-    use {
-      'karb94/neoscroll.nvim',
-      config = function()
-        require('neoscroll').setup()
-      end
-    }
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+    use({ "barrett-ruth/live-server.nvim" })
+    use({ "tpope/vim-surround" })
+    use({
+      "startup-nvim/startup.nvim",
+      requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+      config = function()
+        require"startup".setup()
+      end
+    })
 
     -- Pretty things
     use {
