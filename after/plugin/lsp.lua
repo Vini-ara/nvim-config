@@ -53,11 +53,11 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.format_on_save('gf', {
-    serverss= {
-        ['prettier'] = {'javascript'}
-    }
-})
+-- lsp.format_on_save('gf', {
+--     serverss= {
+--         ['prettier'] = {'javascript'}
+--     }
+-- })
 
 lsp.nvim_workspace()
 

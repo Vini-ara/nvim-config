@@ -27,7 +27,7 @@ vim.keymap.set("v", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
-vim.api.nvim_set_keymap("n", "<leader>f", ":PrettierAsync<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<leader>f", ":PrettierAsync<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
