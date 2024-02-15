@@ -3,8 +3,12 @@
 -- 	disable_italics = true,
 -- })
 
+require('onedark').setup({
+  transparent = true,
+})
+
 vim.g.everforest_background = 'hard'
-vim.g.everforest_transparent_background = 0
+vim.g.everforest_transparent_background = 1
 vim.g.everforest_ui_contrast = 'high'
 
 function ColorMyPencils(color)
@@ -12,4 +16,4 @@ function ColorMyPencils(color)
 	vim.cmd.colorscheme(color)
 end
 
-ColorMyPencils("duskfox")
+ColorMyPencils("onedark")

@@ -29,8 +29,6 @@ return require('packer').startup(function(use)
         }
     }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('JoosepAlviste/nvim-ts-context-commentstring')
-    use({'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" }})
 
     -- FileExplorer
     use {
@@ -50,7 +48,7 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('prettier/vim-prettier')
-    use 'github/copilot.vim'
+    -- use 'github/copilot.vim'
     use 'wakatime/vim-wakatime'
     use {
       'terrortylor/nvim-comment',
@@ -58,16 +56,16 @@ return require('packer').startup(function(use)
         require('nvim_comment').setup()
       end
     }
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-    use({ "barrett-ruth/live-server.nvim" })
+    -- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+    -- use({ "barrett-ruth/live-server.nvim" })
     use({ "tpope/vim-surround" })
-    use({
-      "startup-nvim/startup.nvim",
-      requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-      config = function()
-        require"startup".setup()
-      end
-    })
+    -- use({
+    --   "startup-nvim/startup.nvim",
+    --   requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    --   config = function()
+    --     require"startup".setup()
+    --   end
+    -- })
 
     -- Pretty things
     use {
