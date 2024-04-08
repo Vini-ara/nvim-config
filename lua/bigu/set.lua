@@ -37,20 +37,4 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.g.mapleader = " "
-
-vim.g.clipboard = {
-    name = 'myClipboard',
-    copy = {
-      ["+"] = {'tmux', 'load-buffer', '-'},
-      ["*"] = {'tmux', 'load-buffer', '-'},
-    },
-    paste= {
-      ['+'] = { 'tmux', 'save-buffer', '-' },
-      ['*'] = { 'tmux', 'save-buffer', '-' },
-    },
-    cache_enabled = 1,
-}
-
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- vim.opt.foldmethod = "expr"
+vim.opt.colorcolumn = "90,120"
