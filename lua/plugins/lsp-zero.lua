@@ -7,6 +7,7 @@ return {
     'williamboman/mason-lspconfig.nvim',
     config = function()
       local lsp_zero = require('lsp-zero')
+      lsp_zero.extend_lspconfig()
 
       require('mason-lspconfig').setup({
         ensure_installed = {},
@@ -31,7 +32,7 @@ return {
         vim.keymap.set('n', 'gT', vim.lsp.buf.type_definition, opts)
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
         vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-        vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+        vim.keymap.set("n", "gl", function() vim.diagnostic.open_float() end, opts)
         vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
         vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
         vim.keymap.set("n", "<leader>.", function() vim.lsp.buf.code_action() end, opts)
